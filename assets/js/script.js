@@ -8,9 +8,9 @@ const skills = [
 const projects = [
     {src: './assets/img/projects/botiga_cafe.png', description: 'Coffee shop: make a page for a coffee shop with HTML, CSS'},
     {src: './assets/img/projects/fortfolio.png', description: 'Fortfolio: is a web page for a webDev deploy you own projects, based on HBS, CSS, JavaScript for frontend, in the backend using Nodejs, Express, MongoDB as a database.'},
-    {src: './assets/img/projects/projectEstagiario.png', description: 'WebPage: project to improve CSS and mobile version.'},
+    {src: './assets/img/projects/projectEstagiario.png', description: 'WebPage: project to improve CSS and mobile version.', gitRepo: 'https://github.com/Rgerotto/projeto-Estagiario', deployLink:''},
     {src: './assets/img/projects/nomadnest_voyages.png', description: 'Nomadnest: project from a corse from Udemy to be Master in CSS exploring animation, flexbox and transition'},
-    {src: './assets/img/projects/trillo.png', description: 'Nomadnest: project from a corse from Udemy to be Master in CSS exploring animation, flexbox and transition'}
+    {src: './assets/img/projects/trillo.png', description: 'Nomadnest: project from a corse from Udemy to be Master in CSS exploring animation, flexbox and transition', gitRepo: 'https://github.com/Rgerotto/Trillo', deployLink: 'https://inquisitive-cocada-3fd14d.netlify.app/'}
 ];
 
 function createCard() {
@@ -18,11 +18,13 @@ function createCard() {
         const container = document.getElementsByClassName('container-card')[0];
         const create = document.createElement('div');
         create.className = 'card';
-        create.innerHTML = `<img class="proj" src="${project.src}" alt="Project Image">`;
+        create.innerHTML = 
+            `<img class="proj" src="${project.src}" alt="Project Image">
+            `;
         container.appendChild(create);
 
         create.addEventListener('click', () => {
-            showPopup(project.src, project.description, project.deploy)
+            showPopup(project.src, project.description, project.gitRepo, project.deployLink)
         })
     });
 }
@@ -42,7 +44,7 @@ function createSkill() {
     });
 }
 
-function showPopup(imagePath, description) {
+function showPopup(imagePath, description, gitRepo, deployLink) {
     // Get the popup element and its contents
     const popup = document.querySelector('.popup');
     const popupImage = document.getElementById('popup-image');
@@ -66,3 +68,10 @@ function showPopup(imagePath, description) {
 
 createCard();
 createSkill();
+
+/* NAV HAMBUGER */
+
+const hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector(".nav");
+
+hamburger.addEventListener("click", () => nav.classList.toggle("active"));

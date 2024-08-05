@@ -6,37 +6,77 @@
 }
 
 body {
-    background-color: orangered;
+    background-color: var(--background-color);
     height: 100vh;
     width: 100vw;
 }
+a{
+    text-decoration: none;
+}
+:root{
+    --background-color: rgb(255, 72, 0);
+    --background-color-nav: rgb(149, 149, 149);
+    --color-white: rgb(255,255,255);
+    --color-grey: rgb(58, 58, 58);
 
-nav {
-    height: 5rem;
-    width: 100%;
-    padding: 0 2rem;
-    background-color: rgba(132, 35, 0, 0.464);
+    --shadown: rgb(75, 75, 75);
+}
+/* NAV HAMBUGUER*/
+
+
+/* .header {
+    padding-inline: 16px;
+  } */
+  
+  .nav {
+    width: 100vw;
+    height: 70px;
+    padding: 0 1rem;
+    margin-inline: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    height: 100%;
-    width: 20%;
-    background-color: black;
-}
-
-.link {
-    width: 20%;
+    background-color: var(--background-color-nav);
+  }
+  
+  .logo {
+    font-family: "Sankofa Display", sans-serif;
+    font-size: 48px;
+    color: var(--color-white);
+  }
+  
+  .nav-list {
     display: flex;
-    justify-content: space-around;
-}
+    gap: 32px;
+    padding-right: 2rem;
+    list-style: none;
+  }
+  
+  .nav-list a {
+    font-size: 18px;
+    color: #fff;
+    padding-block: 16px;
+  }
 
-a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
+  .hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+  }
+  
+  .hamburger::after,
+  .hamburger::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--color-white);
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+  }
 
 /* SECTION ABOUT */
 
@@ -45,6 +85,9 @@ a {
     width: 100%;
     padding: 3rem 10rem;
     border-bottom: .2rem solid rgb(255, 255, 255);
+}
+.about{
+    height: 50rem;
 }
 .container-about{
     height: 100%;
@@ -55,10 +98,26 @@ a {
 }
 .txt{
     width: 50%;
-    color: aliceblue;
+    
 }
-img{
-    width: 90px;
+h1{
+  text-align: center;
+  color: var(--color-white);
+}
+.paragraph{
+    font-size: 1rem;
+    line-height: 30px;
+    text-align: center;
+    color: var(--color-grey);
+}
+.skills{
+  color: var(--color-white);
+}
+.photo{
+    width: 300px;
+    border-radius: 500px;
+    border: 1px solid var(--shadown);
+    box-shadow: 6px 6px 20px 1px var(--shadown);
 }
 
 /* SECTION PROJECT */
@@ -74,8 +133,8 @@ img{
     gap: 1rem;
 }
 .card{
-    height: 20rem; /* Set the desired height */
-    width: 35rem; /* Set the desired width */
+    height: 15rem; /* Set the desired height */
+    width: 25rem; /* Set the desired width */
     border: none;
     overflow: hidden; /* Ensures content doesn't overflow */
     display: flex;
@@ -110,13 +169,8 @@ img{
     transform: scale(1.1);
 }
 
-
-
-
-
-
-
 /* Popup styles */
+
 .popup {
     display: flex;
     justify-content: center;
@@ -157,8 +211,82 @@ img{
     cursor: pointer;
 }
 
-@media only screen and (max-width:1000px){
-    body{
-        background-color: aquamarine;
+@media (max-width: 750px) {
+    .hamburger {
+      display: block;
+      z-index: 1;
     }
-}
+  
+    .nav-list {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 0 10px;
+      width: 100vw;
+      height: 100vh;
+      background: var(--background-color);
+      clip-path: circle(100px at 90% -15%);
+      transition: 1s ease-out;
+  
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+  
+      pointer-events: none;
+    }
+  
+    .nav-list a {
+      font-size: 24px;
+      opacity: 0;
+    }
+  
+    .nav-list li:nth-child(1) a {
+      transition: 0.5s 0.2s;
+    }
+  
+    .nav-list li:nth-child(2) a {
+      transition: 0.5s 0.4s;
+    }
+  
+    .nav-list li:nth-child(3) a {
+      transition: 0.5s 0.6s;
+    }
+    .nav-list li:nth-child(4) a {
+        transition: 0.5s 0.8s;
+      }
+  
+    /* Estilos ativos */
+  
+    .nav.active .nav-list {
+      clip-path: circle(1500px at 90% -15%);
+      pointer-events: all;
+    }
+  
+    .nav.active .nav-list a {
+      opacity: 1;
+    }
+  
+    .nav.active .hamburger {
+      position: fixed;
+      top: 26px;
+      right: 16px;
+      border-top-color: transparent;
+    }
+  
+    .nav.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+  
+    .nav.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+
+    .container{
+        padding: 1rem .5rem;
+    }
+    .txt{
+        width: 70%;
+    }
+  }
