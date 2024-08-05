@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -15,6 +15,7 @@ a{
 }
 :root{
     --background-color: rgb(255, 72, 0);
+    --background-color-dark: rgb(158, 45, 0);
     --background-color-nav: rgb(149, 149, 149);
     --color-white: rgb(255,255,255);
     --color-grey: rgb(58, 58, 58);
@@ -55,6 +56,7 @@ a{
   }
   
   .nav-list a {
+    text-transform: uppercase;
     font-size: 18px;
     color: var(--color-grey);
     padding-block: 16px;
@@ -64,7 +66,7 @@ a{
     display: none;
     border: none;
     background: none;
-    border-top: 3px solid var(--background-color);
+    border-top: 3px solid var(--background-color-dark);
     cursor: pointer;
   }
   
@@ -74,7 +76,7 @@ a{
     display: block;
     width: 30px;
     height: 3px;
-    background: var(--background-color);
+    background: var(--background-color-dark);
     margin-top: 5px;
     position: relative;
     transition: 0.3s;
@@ -106,9 +108,10 @@ a{
     align-items: center;
 }
 h1{
-  font-family: "Sankofa Display", sans-serif;
+  text-transform: uppercase;
   font-size: 4rem;
-  letter-spacing: 5px;
+  font-weight: 400;
+  letter-spacing: 1px;
   margin-bottom: 1rem;
   text-align: center;
   color: var(--color-white);
@@ -150,9 +153,9 @@ h1{
 
 /* SECTION PROJECT */
 .subtitle{
-  font-family: "Sankofa Display", sans-serif;
   color: var(--color-white);
   font-size: 4rem;
+  text-transform: uppercase;
   letter-spacing: 5px;
   margin-bottom: 2rem;
     text-align: center;
@@ -162,7 +165,7 @@ h1{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
 }
 .card{
     height: 15rem; /* Set the desired height */
@@ -170,8 +173,27 @@ h1{
     border: none;
     overflow: hidden; /* Ensures content doesn't overflow */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.card:hover{
+  transform: scale(.9);
+}
+.btn{
+  margin: .5rem 0;
+}
+.btn-repo{
+  background-color: transparent;
+  padding: .2rem .5rem;
+  border: none;
+}
+.fa-github, .fa-rocket{
+  font-size: 1.3rem;
+  color: var(--color-white);
+}
+.fa-github:hover, .fa-rocket:hover{
+  color: var(--color-grey);
 }
 .proj{
     width: 100%;
@@ -188,14 +210,17 @@ h1{
     gap: 1rem;
 }
 .skill{
-    height: 10rem;
-    width: 10rem;
-    background-color: rgb(255, 255, 255);
+    height: 5rem;
+    width: 5rem;
+/*     background-color: rgb(255, 255, 255); */
     border-radius: 10px;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .logo-skill{
-    width: 10rem;
+    width: 4rem;
 }
 .logo-skill:hover{
     transform: scale(1.1);
@@ -211,6 +236,10 @@ h1{
 }
 .title{
   padding-right: .4rem;
+  color: var(--background-color);
+}
+.fa-square-github, .fa-linkedin{
+  font-size: 1.5rem;
   color: var(--background-color);
 }
 /* Popup styles */
@@ -233,6 +262,10 @@ h1{
 }
 
 .popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -243,15 +276,19 @@ h1{
 }
 
 .popup-content img {
-    max-width: 100%;
+    width: 100px;
     height: auto;
+    margin-bottom: 1rem;
+}
+#popup-description{
+  text-align: center;
 }
 
 .popup-close {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 24px;
+    font-size: 44px;
     cursor: pointer;
 }
 
