@@ -41,6 +41,8 @@ a{
   
   .logo {
     font-family: "Sankofa Display", sans-serif;
+    letter-spacing: 1rem;
+    font-weight: 900;
     font-size: 48px;
     color: var(--color-white);
   }
@@ -83,11 +85,11 @@ a{
 .container{
     height: auto;
     width: 100%;
-    padding: 3rem 10rem;
-    border-bottom: .2rem solid rgb(255, 255, 255);
+    padding: 1rem 10rem;
+    border-bottom: .1rem solid var(--color-grey);
 }
 .about{
-    height: 50rem;
+    height: 40rem;
 }
 .container-about{
     height: 100%;
@@ -97,10 +99,13 @@ a{
     align-items: center;
 }
 .txt{
-    width: 50%;
-    
+    width: 50%; 
 }
 h1{
+  font-family: "Sankofa Display", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
   text-align: center;
   color: var(--color-white);
 }
@@ -116,14 +121,18 @@ h1{
 .photo{
     width: 300px;
     border-radius: 500px;
-    border: 1px solid var(--shadown);
+    border: .6px solid var(--shadown);
     box-shadow: 6px 6px 20px 1px var(--shadown);
 }
 
 /* SECTION PROJECT */
 .subtitle{
+  font-family: "Sankofa Display", sans-serif;
+  color: var(--color-white);
+  font-size: 4rem;
+  letter-spacing: 5px;
+  margin-bottom: 2rem;
     text-align: center;
-    margin-bottom: 2rem;
 }
 .container-card{
     display: flex;
@@ -169,6 +178,18 @@ h1{
     transform: scale(1.1);
 }
 
+#contact{
+  background-color: var(--color-white);
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  padding-right: .4rem;
+  color: var(--background-color);
+}
 /* Popup styles */
 
 .popup {
@@ -284,9 +305,24 @@ h1{
     }
 
     .container{
+      height: auto;
         padding: 1rem .5rem;
     }
+    .container-about{
+      display: flex;
+      flex-direction: column;
+    }
     .txt{
-        width: 70%;
+        width: 90%;
+    }
+    h1{
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .img{
+      margin-top: 2rem;
+    }
+    .photo{
+      width: 200px;
     }
   }
