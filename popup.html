@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .popup-skill {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .popup-skill.hidden {
+            display: none;
+        }
+        .content-popup-skill {
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            position: relative;
+        }
+        .close-popup {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="popup-skill hidden" aria-hidden="true">
+        <div class="content-popup-skill" role="dialog" aria-labelledby="popup-title" aria-describedby="popup-description">
+          <span class="close-popup" aria-label="Close">&times;</span>
+          <img src="" alt="Skill Image" id="img-popup" />
+          <p id="description-popup">Description</p>
+        </div>
+    </div>
+
+    <script>
+        function showPopupSkill(imagePathSkill, descriptionSkillText) {
+            // Get the popup-skill element and its contents
+            const popupSkill = document.getElementsByClassName('popup-skill')[0]; // Access the first element
+            const popupImgSkill = document.getElementById('img-popup');
+            const descriptionElement = document.getElementById('description-popup');
+
+            if (popupSkill && popupImgSkill && descriptionElement) {
+                // Set the image source and description
+                popupImgSkill.src = imagePathSkill;
+                descriptionElement.textContent = descriptionSkillText;
+
+                // Show the popup
+                popupSkill.classList.remove('hidden');
+                popupSkill.setAttribute('aria-hidden', 'false');
+
+                // Add event listener to close the popup
+                const btnClose = document.getElementsByClassName('close-popup')[0];
+                btnClose.addEventListener('click', () => {
+                    popupSkill.classList.add('hidden');
+                    popupSkill.setAttribute('aria-hidden', 'true');
+                });
+            }
+        }
+
+        // Example call to showPopupSkill
+        // This line should be triggered by an actual event in a real scenario
+        showPopupSkill('path/to/image.jpg', 'This is a description');
+    </script>
+</body>
+</html>

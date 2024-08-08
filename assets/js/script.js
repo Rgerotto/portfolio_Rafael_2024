@@ -17,8 +17,8 @@ const projects = [
     {src: './assets/img/projects/botiga_cafe.png', description: 'Coffee shop: make a page for a coffee shop with HTML, CSS', gitRepo:'https://github.com/Rgerotto/Botiga_de_cafes', deployLink:'https://botigadicoffee.netlify.app'},
     {src: './assets/img/projects/projectEstagiario.png', description: 'WebPage: project to improve CSS and mobile version.', gitRepo: 'https://github.com/Rgerotto/projeto-Estagiario', deployLink:'https://internishp-project.netlify.app'},
     {src: './assets/img/projects/Nomadnest_Voyages.png', description: 'Nomadnest: project from a corse from Udemy to be Master in CSS exploring animation, flexbox and transition', gitRepo:'https://github.com/Rgerotto/Natours', deployLink:'https://nomadnest-voyages.netlify.app'},
-    {src: './assets/img/projects/trillo.png', description: 'Nomadnest: project from a corse from Udemy to be Master in CSS exploring animation, flexbox and transition', gitRepo: 'https://github.com/Rgerotto/Trillo', deployLink: 'https://trillo-rafael.netlify.app/'},
-    {src: './assets/img/projects/trillo.png', description: 'Nomadnest: project from a corse from Udemy to be Master in CSS exploring animation, flexbox and transition', gitRepo: 'https://github.com/Rgerotto/nexter', deployLink: 'https://github.com/Rgerotto/nexter'},
+    {src: './assets/img/projects/trillo.png', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!', gitRepo: 'https://github.com/Rgerotto/Trillo', deployLink: 'https://trillo-rafael.netlify.app/'},
+    {src: './assets/img/projects/trillo.png', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!', gitRepo: 'https://github.com/Rgerotto/nexter', deployLink: 'https://github.com/Rgerotto/nexter'},
     {src: './assets/img/projects/black-jack.png', description: 'Game', gitRepo: 'https://github.com/Rgerotto/Black_jack', deployLink: 'https://whimsical-gnome-13d6be.netlify.app/'},
     {src: './assets/img/projects/guess_my_number.png', description: 'Game', gitRepo: 'https://github.com/Rgerotto/Guess_my_number', deployLink: 'https://moonlit-axolotl-de3c90.netlify.app'}
 ];
@@ -54,10 +54,35 @@ function createSkill() {
 
         // Add click event to show popup
         create.addEventListener('click', () => {
-            showPopup(skill.src, skill.description);
+            showPopupSkill(skill.src, skill.description);
         });
     });
 }
+
+function showPopupSkill(imagePathSkill, descriptionSkillText) {
+    // Get the popup-skill element and its contents
+    const popupSkill = document.getElementsByClassName('popup-skill')[0]; // Access the first element
+    const popupImgSkill = document.getElementById('img-popup');
+    const descriptionElement = document.getElementById('description-popup');
+
+    if (popupSkill && popupImgSkill && descriptionElement) {
+        // Set the image source and description
+        popupImgSkill.src = imagePathSkill;
+        descriptionElement.textContent = descriptionSkillText;
+
+        // Show the popup
+        popupSkill.classList.remove('hidden');
+        popupSkill.setAttribute('aria-hidden', 'false');
+
+        // Add event listener to close the popup
+        const btnClose = document.getElementsByClassName('close-popup')[0];
+        btnClose.addEventListener('click', () => {
+            popupSkill.classList.add('hidden');
+            popupSkill.setAttribute('aria-hidden', 'true');
+        });
+    }
+}
+
 
 function showPopup(imagePath, description, gitRepo, deployLink) {
     // Get the popup element and its contents

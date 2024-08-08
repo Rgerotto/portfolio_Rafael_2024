@@ -15,10 +15,12 @@ a{
 }
 :root{
     --background-color: rgb(255, 72, 0);
+    --background-color-light: rgba(255, 72, 0, 0.554);
     --background-color-dark: rgb(158, 45, 0);
     --background-color-nav: rgb(149, 149, 149);
     --color-white: rgb(255,255,255);
     --color-grey: rgb(58, 58, 58);
+    --color-grey-light: rgb(105, 105, 105);
     --color-link: rgb(139, 139, 139);
     --shadown: rgb(75, 75, 75);
 }
@@ -57,11 +59,11 @@ a{
   
   .nav-list a {
     text-transform: uppercase;
+    padding: 0 1rem;
     font-size: 18px;
     color: var(--color-grey);
     padding-block: 16px;
   }
-
   .hamburger {
     display: none;
     border: none;
@@ -177,9 +179,9 @@ h1{
     justify-content: center;
     align-items: center;
 }
-.card:hover{
+/* .card:hover{
   transform: scale(.9);
-}
+} */
 .btn{
   margin: .5rem 0;
 }
@@ -219,6 +221,9 @@ h1{
     justify-content: center;
     align-items: center;
 }
+#skill{
+  padding: 0 26rem;
+}
 .logo-skill{
     width: 4rem;
 }
@@ -228,7 +233,7 @@ h1{
 
 #contact{
   background-color: var(--color-white);
-  height: 10rem;
+  height: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -243,6 +248,46 @@ h1{
   color: var(--background-color);
 }
 /* Popup styles */
+
+.popup-skill{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-skill.hidden{
+  display: none;
+}
+.content-popup-skill{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+#img-popup{
+  width: 10%;
+}
+
+.close-popup{
+  
+    background-color: var(--background-color-light);
+    color: var(--color-white);
+    padding: 0 10px;
+    border-radius: 500px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
 
 .popup {
     display: flex;
@@ -286,10 +331,17 @@ h1{
 
 .popup-close {
     position: absolute;
+    background-color: var(--background-color-light);
+    color: var(--color-white);
+    padding: 0 10px;
+    border-radius: 500px;
     top: 10px;
     right: 10px;
-    font-size: 44px;
+    font-size: 2rem;
     cursor: pointer;
+}
+.popup-close:hover {
+  background-color: var(--background-color);
 }
 
 @media (max-width: 750px) {
@@ -392,4 +444,8 @@ h1{
     .logo-skill{
       width: 5rem;
   }
+  #skill{
+    padding: 0 2rem;
   }
+  }
+
