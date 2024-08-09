@@ -89,7 +89,7 @@ a{
 .container{
     height: auto;
     width: 100%;
-    padding: 1rem 10rem;
+    padding: 3rem 10rem;
     border-bottom: .1rem solid var(--color-grey);
 }
 .about{
@@ -170,7 +170,7 @@ h1{
     gap: 2rem;
 }
 .card{
-    height: 15rem; /* Set the desired height */
+    height: 18rem; /* Set the desired height */
     width: 25rem; /* Set the desired width */
     border: none;
     overflow: hidden; /* Ensures content doesn't overflow */
@@ -249,6 +249,7 @@ h1{
 }
 /* Popup styles */
 
+/* popup Skill */
 .popup-skill{
   height: 100%;
   width: 100%;
@@ -265,30 +266,40 @@ h1{
   display: none;
 }
 .content-popup-skill{
-  width: 300px;
-  height: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #fff;
+  justify-content: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
 }
 #img-popup{
-  width: 10%;
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
 }
 
 .close-popup{
-  
-    background-color: var(--background-color-light);
-    color: var(--color-white);
-    padding: 0 10px;
-    border-radius: 500px;
-    font-size: 2rem;
-    cursor: pointer;
+  position: absolute;
+  background-color: var(--background-color-light);
+  color: var(--color-white);
+  padding: 0 10px;
+  border-radius: 500px;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.close-popup:hover {
+  background-color: var(--background-color);
 }
 
-
-
+/* popup Project */
 .popup {
     display: flex;
     justify-content: center;
@@ -321,11 +332,11 @@ h1{
 }
 
 .popup-content img {
-    width: 100px;
+    width: 300px;
     height: auto;
     margin-bottom: 1rem;
 }
-#popup-description{
+.popup-description{
   text-align: center;
 }
 

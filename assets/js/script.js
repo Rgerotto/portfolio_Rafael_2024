@@ -1,11 +1,11 @@
 const skills = [
     { src: './assets/img/skills/vs-code.svg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!' },
     { src: './assets/img/skills/github.svg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!' },
-    { src: './assets/img/skills/icons8-css.svg', description: 'CSS: Styling web pages with CSS for responsive design and user interfaces.' },
+    { src: './assets/img/skills/icons8-css.svg', description: 'CSS: Styling web pages with CSS for responsive design and user interfaces. 2 Years of Experience' },
     { src: './assets/img/skills/bootstrap.svg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!' },
-    { src: './assets/img/skills/icons8-html.svg', description: 'HTML: Markup language for creating web pages and web applications.' },
-    { src: './assets/img/skills/icons8-javascript.svg', description: 'JavaScript: Programming language for creating interactive web applications.' },
-    { src: './assets/img/skills/icons8-react-js.svg', description: 'React: Library for building user interfaces with reusable components.' },
+    { src: './assets/img/skills/icons8-html.svg', description: 'HTML: Markup language for creating web pages and web applications. 2 years of Experience' },
+    { src: './assets/img/skills/icons8-javascript.svg', description: 'JavaScript: Programming language for creating interactive web applications. 1 year of experience' },
+    { src: './assets/img/skills/icons8-react-js.svg', description: 'React: Library for building user interfaces with reusable components. 1 year of experience' },
     { src: './assets/img/skills/icons8-express-js.svg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!' },
     { src: './assets/img/skills/icons8-node-js.svg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!' },
     { src: './assets/img/skills/npm.svg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!' },
@@ -14,13 +14,14 @@ const skills = [
 
 const projects = [
     {src: './assets/img/projects/fortfolio.png', description: 'Fortfolio: is a web page for a webDev deploy you own projects, based on HBS, CSS, JavaScript for frontend, in the backend using Nodejs, Express, MongoDB as a database.', gitRepo:'', deployLink:''},
-    {src: './assets/img/projects/botiga_cafe.png', description: 'Coffee shop: make a page for a coffee shop with HTML, CSS', gitRepo:'https://github.com/Rgerotto/Botiga_de_cafes', deployLink:'https://botigadicoffee.netlify.app'},
+    {src: './assets/img/projects/botiga_cafe.png', description: 'Coffee shop: make a page for a coffee shop with HTML, CSS, and responsive', gitRepo:'https://github.com/Rgerotto/Botiga_de_cafes', deployLink:'https://botigadicoffee.netlify.app'},
     {src: './assets/img/projects/projectEstagiario.png', description: 'WebPage: project to improve CSS and mobile version.', gitRepo: 'https://github.com/Rgerotto/projeto-Estagiario', deployLink:'https://internishp-project.netlify.app'},
     {src: './assets/img/projects/Nomadnest_Voyages.png', description: 'Nomadnest: project from a corse from Udemy to be Master in CSS exploring animation, flexbox and transition', gitRepo:'https://github.com/Rgerotto/Natours', deployLink:'https://nomadnest-voyages.netlify.app'},
-    {src: './assets/img/projects/trillo.png', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!', gitRepo: 'https://github.com/Rgerotto/Trillo', deployLink: 'https://trillo-rafael.netlify.app/'},
-    {src: './assets/img/projects/trillo.png', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!', gitRepo: 'https://github.com/Rgerotto/nexter', deployLink: 'https://github.com/Rgerotto/nexter'},
-    {src: './assets/img/projects/black-jack.png', description: 'Game', gitRepo: 'https://github.com/Rgerotto/Black_jack', deployLink: 'https://whimsical-gnome-13d6be.netlify.app/'},
-    {src: './assets/img/projects/guess_my_number.png', description: 'Game', gitRepo: 'https://github.com/Rgerotto/Guess_my_number', deployLink: 'https://moonlit-axolotl-de3c90.netlify.app'}
+    {src: './assets/img/projects/trillo.png', description: 'Trillo: project from Udemy course CSS Master to inprove my CSS skills, improve more my animation, transiction and flexbox', gitRepo: 'https://github.com/Rgerotto/Trillo', deployLink: 'https://trillo-rafael.netlify.app/'},
+    {src: './assets/img/projects/trillo.jng', description: 'Nexter: project from Udemy CSS Master to improve CSS grid', gitRepo: 'https://github.com/Rgerotto/nexter', deployLink: 'https://github.com/Rgerotto/nexter'},
+    {src: './assets/img/projects/black-jack.png', description: 'Game: Project from Udemy JavaScript to improve DOM  monipulation', gitRepo: 'https://github.com/Rgerotto/Black_jack', deployLink: 'https://whimsical-gnome-13d6be.netlify.app/'},
+    {src: './assets/img/projects/guess_my_number.png', description: 'Game: Project from Udemy JavaScript to improve DOM  monipulation', gitRepo: 'https://github.com/Rgerotto/Guess_my_number', deployLink: 'https://moonlit-axolotl-de3c90.netlify.app'},
+    {src: './assets/img/projects/work_in_progress.jpg', description: 'HelpFornos: Landing Page for a bussines made with HTML, CSS, JavaScript', gitRepo: 'https://', deployLink: 'https://'}
 ];
 
 function createCard() {
@@ -29,7 +30,7 @@ function createCard() {
         const create = document.createElement('div');
         create.className = 'card';
         create.innerHTML = 
-            `<img class="proj" src="${project.src}" alt="Project Image">
+            `<img class="proj" src="${project.src}" alt="${project.description}">
             <div class="btn">
             <button class="btn-repo"><a href="${project.gitRepo}" target="_blank"><i class="fa-brands fa-github"></i></a></button>
             <button class="btn-repo"><a href="${project.deployLink}" target="_blank"><i class="fa-solid fa-rocket"></i></a></button>
