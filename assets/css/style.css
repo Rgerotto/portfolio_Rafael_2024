@@ -25,11 +25,6 @@ a{
     --shadown: rgb(75, 75, 75);
 }
 /* NAV HAMBUGUER*/
-
-
-/* .header {
-    padding-inline: 16px;
-  } */
   
   .nav {
     width: 100vw;
@@ -453,10 +448,24 @@ h1{
       width: 5rem;
   }
     .logo-skill{
-      width: 5rem;
+      width: 3rem;
   }
+  .logo-skill:hover{
+    transform: none;
+}
   #skill{
     padding: 0 2rem;
   }
   }
 
+  @media (min-width: 751px) and (max-width: 1300px){
+    #skill{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .container-skill{
+      width: 500px;
+    }
+  }
