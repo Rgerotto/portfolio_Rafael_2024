@@ -1,14 +1,14 @@
 const skills = [
-    { src: './assets/img/skills/vs-code.svg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!' },
-    { src: './assets/img/skills/github.svg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!' },
-    { src: './assets/img/skills/icons8-css.svg', description: 'CSS: Styling web pages with CSS for responsive design and user interfaces. 2 Years of Experience' },
-    { src: './assets/img/skills/bootstrap.svg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!' },
-    { src: './assets/img/skills/icons8-html.svg', description: 'HTML: Markup language for creating web pages and web applications. 2 years of Experience' },
-    { src: './assets/img/skills/icons8-javascript.svg', description: 'JavaScript: Programming language for creating interactive web applications. 1 year of experience' },
-    { src: './assets/img/skills/icons8-react-js.svg', description: 'React: Library for building user interfaces with reusable components. 1 year of experience' },
-    { src: './assets/img/skills/icons8-express-js.svg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!' },
-    { src: './assets/img/skills/icons8-node-js.svg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!' },
-    { src: './assets/img/skills/npm.svg', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, rem!' },
+    { src: './assets/img/skills/vs-code.svg', description: 'Visual Studio Code is a lightweight, open-source code editor developed by Microsoft, offering powerful features like IntelliSense, debugging, and Git integration, making it highly customizable and suitable for a wide range of programming tasks. 2 years of experience' },
+    { src: './assets/img/skills/github.svg', description: 'GitHub is a web-based platform that provides version control using Git, enabling developers to collaborate on code, track changes, and manage projects with features like pull requests, issues, and repositories. 2 years of experience' },
+    { src: './assets/img/skills/icons8-css.svg', description: 'CSS (Cascading Style Sheets) is a style sheet language used to describe the presentation and layout of HTML content, allowing developers to control the visual appearance of web pages, including colors, fonts, spacing, and responsiveness. 2 years of experience' },
+    { src: './assets/img/skills/bootstrap.svg', description: 'Bootstrap is a popular open-source front-end framework that provides pre-designed components, responsive grid systems, and JavaScript plugins, making it easier to develop mobile-first and responsive websites quickly. 1 year of experience' },
+    { src: './assets/img/skills/icons8-html.svg', description: 'HTML (HyperText Markup Language) is the standard markup language used to create and structure content on the web, defining elements like headings, paragraphs, links, and images in a webpage. 2 years of experience' },
+    { src: './assets/img/skills/icons8-javascript.svg', description: 'JavaScript is a versatile programming language primarily used for adding interactivity, dynamic content, and complex functionalities to websites, running both on the client side in browsers and on the server side with environments like Node.js. 1 year of experience' },
+    { src: './assets/img/skills/icons8-react-js.svg', description: 'React is a JavaScript library developed by Facebook for building user interfaces, particularly single-page applications, using a component-based architecture that allows for efficient rendering and management of dynamic data. 1 year of experience' },
+    { src: './assets/img/skills/icons8-express-js.svg', description: 'Express is a minimal and flexible Node.js web application framework that provides a robust set of features for building web and mobile applications, including routing, middleware support, and simplified API development. 1 year of experience' },
+    { src: './assets/img/skills/icons8-node-js.svg', description: 'Node.js is a JavaScript runtime built on Chrome V8 engine that allows developers to run JavaScript on the server side, enabling the creation of fast and scalable network applications. 1 year of experience' },
+    { src: './assets/img/skills/npm.svg', description: 'npm (Node Package Manager) is a package manager for JavaScript that enables developers to install, share, and manage libraries and dependencies in their Node.js projects, streamlining the development process. 1 year of experience' },
 
 ];
 
@@ -18,7 +18,7 @@ const projects = [
     {src: './assets/img/projects/projectEstagiario.png', description: 'WebPage: project to improve CSS and mobile version.', gitRepo: 'https://github.com/Rgerotto/projeto-Estagiario', deployLink:'https://internishp-project.netlify.app'},
     {src: './assets/img/projects/Nomadnest_Voyages.png', description: 'Nomadnest: project from a corse from Udemy to be Master in CSS exploring animation, flexbox and transition', gitRepo:'https://github.com/Rgerotto/Natours', deployLink:'https://nomadnest-voyages.netlify.app'},
     {src: './assets/img/projects/trillo.png', description: 'Trillo: project from Udemy course CSS Master to inprove my CSS skills, improve more my animation, transiction and flexbox', gitRepo: 'https://github.com/Rgerotto/Trillo', deployLink: 'https://trillo-rafael.netlify.app/'},
-    {src: './assets/img/projects/trillo.jng', description: 'Nexter: project from Udemy CSS Master to improve CSS grid', gitRepo: 'https://github.com/Rgerotto/nexter', deployLink: 'https://github.com/Rgerotto/nexter'},
+    /* {src: './assets/img/projects/trillo.jng', description: 'Nexter: project from Udemy CSS Master to improve CSS grid', gitRepo: 'https://github.com/Rgerotto/nexter', deployLink: 'https://github.com/Rgerotto/nexter'}, */
     {src: './assets/img/projects/black-jack.png', description: 'Game: Project from Udemy JavaScript to improve DOM  monipulation', gitRepo: 'https://github.com/Rgerotto/Black_jack', deployLink: 'https://whimsical-gnome-13d6be.netlify.app/'},
     {src: './assets/img/projects/guess_my_number.png', description: 'Game: Project from Udemy JavaScript to improve DOM  monipulation', gitRepo: 'https://github.com/Rgerotto/Guess_my_number', deployLink: 'https://moonlit-axolotl-de3c90.netlify.app'},
     {src: './assets/img/projects/work_in_progress.jpg', description: 'HelpFornos: Landing Page for a bussines made with HTML, CSS, JavaScript', gitRepo: 'https://', deployLink: 'https://'}
