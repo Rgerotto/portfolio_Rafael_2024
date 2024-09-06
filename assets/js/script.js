@@ -24,6 +24,12 @@ const projects = [
     {src: './assets/img/projects/work_in_progress.jpg', description: 'HelpFornos: Landing Page for a bussines made with HTML, CSS, JavaScript', gitRepo: 'https://', deployLink: 'https://'}
 ];
 
+const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+})
+
 function createCard() {
     projects.forEach(project => {
         const container = document.getElementsByClassName('container-card')[0];
