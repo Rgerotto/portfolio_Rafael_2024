@@ -70,7 +70,10 @@ a {
   color: var(--color-grey);
   padding-block: 16px;
 }
-
+.nav-list a.active{
+  background-color: var(--background-color);
+  color: var(--color-white);
+}
 .hamburger {
   display: none;
   border: none;
@@ -275,7 +278,7 @@ h1 {
 .fa-github,
 .fa-rocket {
   font-size: 1.3rem;
-  color: var(--color-white);
+  color: var(--background-color);
 }
 
 .fa-github:hover,
@@ -400,6 +403,7 @@ h1 {
 /* popup Project */
 .popup {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
