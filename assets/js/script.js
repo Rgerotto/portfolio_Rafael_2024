@@ -21,6 +21,7 @@ const projects = [
     /* {src: './assets/img/projects/trillo.jng', description: 'Nexter: project from Udemy CSS Master to improve CSS grid', gitRepo: 'https://github.com/Rgerotto/nexter', deployLink: 'https://github.com/Rgerotto/nexter'}, */
     {src: './assets/img/projects/black-jack.avif', description: 'Game: Project from Udemy JavaScript to improve DOM  monipulation', gitRepo: 'https://github.com/Rgerotto/Black_jack', deployLink: 'https://whimsical-gnome-13d6be.netlify.app/'},
     {src: './assets/img/projects/guess_my_number.avif', description: 'Game: Project from Udemy JavaScript to improve DOM  monipulation', gitRepo: 'https://github.com/Rgerotto/Guess_my_number', deployLink: 'https://moonlit-axolotl-de3c90.netlify.app'},
+    {src: './assets/img/projects/moto2go.avif', description: 'Moto2Go Central: Built with React.js and CSS, this platform streamlines bike and motorbike rentals by redirecting users to WhatsApp with pre-filled booking details.', gitRepo: 'https://github.com/Moto2GoCentral/webPage', deployLink: 'https://moto2gocentral.netlify.app/'},
     //{src: './assets/img/projects/work_in_progress.jpg', description: 'HelpFornos: Landing Page for a bussines made with HTML, CSS, JavaScript', gitRepo: 'https://', deployLink: 'https://'}
 ];
 
