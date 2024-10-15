@@ -32,7 +32,6 @@ chk.addEventListener('change', () => {
 })
 
 const navLinks = document.querySelectorAll('.nav-list a');
-
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         navLinks.forEach(navLinks => {

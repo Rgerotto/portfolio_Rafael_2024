@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +19,15 @@
   --color-link: rgb(139, 139, 139);
   --shadown: rgb(75, 75, 75);
 }
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px; /* Altura da barra de rolagem horizontal */
+}
 
+::-webkit-scrollbar-thumb {
+  background: var(--color-grey); /* Cor da parte deslizante da barra de rolagem */
+  border-radius: 10px;
+}
 body {
   background-color: var(--background-color);
   height: 100vh;
@@ -43,17 +54,19 @@ a {
   display: flex;
   justify-content: end;
   align-items: center;
-  background-color: var(--background-color-nav);
+  background-color: transparent;
 }
 
 .logo {
-  font-family: "Sankofa Display", sans-serif;
   letter-spacing: 1rem;
   position: absolute;
   left: 20px;
-  font-weight: 900;
+  font-weight: 100;
   font-size: 48px;
   color: var(--color-white);
+}
+.logo-letters{
+  font-weight: 300;
 }
 
 .nav-list {
