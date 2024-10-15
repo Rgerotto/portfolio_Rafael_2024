@@ -9,7 +9,7 @@
 }
 
 :root {
-  --background-color: rgb(255, 72, 0);
+  --background-color: rgba(255, 72, 0, 0.526);
   --background-color-light: rgba(255, 72, 0, 0.554);
   --background-color-dark: rgb(116, 32, 4);
   --background-color-nav: rgb(149, 149, 149);
@@ -20,6 +20,7 @@
   --shadown: rgb(75, 75, 75);
 }
 ::-webkit-scrollbar {
+  background-color: black;
   width: 9px;
   height: 9px; /* Altura da barra de rolagem horizontal */
 }
@@ -54,7 +55,8 @@ a {
   display: flex;
   justify-content: end;
   align-items: center;
-  background-color: transparent;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.533);
 }
 
 .logo {
@@ -82,6 +84,7 @@ a {
   font-size: 18px;
   color: var(--color-grey);
   padding-block: 16px;
+  z-index: 1;
 }
 .nav-list a.active{
   background-color: var(--background-color);
@@ -317,16 +320,11 @@ h1 {
 .skill {
   height: 5rem;
   width: 5rem;
-  /*     background-color: rgb(255, 255, 255); */
   border-radius: 10px;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#skill {
-  padding: 0 26rem;
 }
 
 .logo-skill {
