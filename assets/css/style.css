@@ -12,6 +12,7 @@
   --background-color: #F5F5F5;
   --background-color-nav: rgb(149, 149, 149);
   --background-btn: #FAFAFA;
+  --color-hamburguer: #0768a8;
   --color-text-highlight: #3498DB;
   --color-grey: #333333;
   --color-grey-light: rgb(105, 105, 105);
@@ -55,7 +56,8 @@ a {
   justify-content: end;
   align-items: center;
   backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, 0.533);
+  /* background-color: rgba(255, 255, 255, 0.533); */
+  background: linear-gradient(90deg, rgba(133,188,139,0.6) 0%, rgba(250,224,144,0.6) 50%, rgba(129,168,224,0.6) 100%);
 }
 
 .logo {
@@ -85,16 +87,16 @@ a {
   padding-block: 16px;
   z-index: 1;
 }
-.nav-list a.active{
+/* .nav-list a.active{
   background-color: var(--background-color);
   color: var(--color-text-highlight);
   border-radius: 5px;
-}
+} */
 .hamburger {
   display: none;
   border: none;
   background: none;
-  border-top: 3px solid var(--background-color-dark);
+  border-top: 3px solid var(--color-hamburguer);
   cursor: pointer;
 }
 
@@ -104,10 +106,10 @@ a {
   display: block;
   width: 30px;
   height: 3px;
-  background: var(--background-color-dark);
+  background: var(--color-hamburguer);
   margin-top: 5px;
   position: relative;
-  transition: 0.3s;
+  transition: 0.7s ease;
 }
 .dark-mode{
   display: none;
@@ -294,12 +296,13 @@ h1 {
 .fa-github,
 .fa-rocket {
   font-size: 1.3rem;
-  color: var(--background-color);
+  color: var(--color-grey);
+  
 }
 
 .fa-github:hover,
 .fa-rocket:hover {
-  color: var(--color-grey);
+  color: var(--color-link);
 }
 
 .proj {
